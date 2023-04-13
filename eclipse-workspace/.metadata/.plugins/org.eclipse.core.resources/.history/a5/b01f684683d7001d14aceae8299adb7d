@@ -1,0 +1,43 @@
+package A;
+import java.util.Arrays;
+
+public class A {
+static final int S = 10;
+int[] arr = new int[S];
+
+A() {
+	for (int i = 0; i < S; i++) {
+        arr[i] = (int)(Integer.MAX_VALUE * Math.random()); // generates random integer between 0 and 999
+        
+    } }
+	
+public void selectionSort() {
+	    for (int i = 0; i < S; i++) {
+	        int minIndex = i;
+	        for (int j = i + 1; j < arr.length; j++) {
+	            if (arr[j] < arr[minIndex]) {
+	                minIndex = j;
+	            }
+	        }	        
+	    
+	}	
+	 
+}
+public static void main(String[] args) {
+	A first = new A();
+	System.out.println(Arrays.toString(first.arr));
+	
+	first.selectionSort();
+	
+	System.out.println(Arrays.toString(first.arr));
+	//Array second = new Array();
+	A second = new A();
+	System.out.println(Arrays.toString(second.arr));
+	
+}
+
+
+	
+}
+
+

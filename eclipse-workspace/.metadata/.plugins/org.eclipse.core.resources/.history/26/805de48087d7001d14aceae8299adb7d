@@ -1,0 +1,120 @@
+package A;
+
+import java.util.Arrays;
+
+public class A {
+	static final int S = 100000;
+	int[] arr = new int[S];
+
+	A() {
+		for (int i = 0; i < S; i++) {
+			arr[i] = (int) (Integer.MAX_VALUE * Math.random()); // generates random integer between 0 and 999
+
+		}
+	}
+
+	public void selectionSort() {
+		// Capture the start time
+		long startTime = System.currentTimeMillis();
+		int iMin;
+		/*
+		 * With the outer loop we iterating through the array
+		 * 
+		 * we use index< arr.lenght-1 because by the time the program reach the last
+		 * element the array will be already sorted and it is not needed to make whole
+		 * comparing operations for the last element
+		 * 
+		 * with the inner loop we comparing the element from the array with all the
+		 * elements in this array starting from minimal index Searching for the smallest
+		 * element in the unsorted part and place it at beginning
+		 */
+		for (int i = 0; i < arr.length - 1; i++) {
+			// iMin variable will keep track of the index of the smallest unsorted element
+			// found in the inner loop.
+			iMin = i;
+			for (int iToSort = i + 1; iToSort < arr.length; iToSort++) {
+				/*
+				 * If the current element being iterated (arr[iToSort]) is smaller than the
+				 * current smallest unsorted element (arr[iMin]), the iMin variable is updated
+				 * to point to the new smallest element.
+				 */
+				if (arr[iMin] > arr[iToSort]) {
+					iMin = iToSort;
+				}
+			}
+			/*
+			 * these three lines of code swap the values of two elements in an array while
+			 * preserving the original value of one of them in a temporary variable
+			 * 
+			 * After the inner loop finishes, the smallest unsorted element found
+			 * (arr[iMin]) is swapped with the first unsorted element in the array (arr[i]).
+			 * 
+			 * the value of the element at index i is stored in a temporary variable called
+			 * smallest. This is necessary because once the value at index i is replaced
+			 * with the value at index iMin, the original value at index i would be lost.
+			 */
+			int smallest = arr[i];
+			// replacing the value at index i with the value at index iMin.
+			arr[i] = arr[iMin];
+			// replacing the value at index iMin with the value stored in smallest, which is
+			// the original value at index i.
+			arr[iMin] = smallest;
+		}
+		// Capture the end time
+		long endTime = System.currentTimeMillis();
+		// Calculate the elapsed time
+		long elapsedTime = endTime - startTime;
+		// Print out the sorted array and elapsed time
+		System.out.println("Elapsed time: " + elapsedTime + " milliseconds");
+
+	}
+
+	public void selectionSort(int[] arr) {
+		// Capture the start time
+		long startTime = System.currentTimeMillis();
+		int iMin;
+		for (int i = 0; i < arr.length - 1; i++) {
+			iMin = i;
+			for (int iToSort = i + 1; iToSort < arr.length; iToSort++) {
+				if (arr[iMin] > arr[iToSort]) {
+					iMin = iToSort;
+				}
+			}
+			int smallest = arr[i];
+			arr[i] = arr[iMin];
+			arr[iMin] = smallest;
+		}
+
+		// Capture the end time
+		long endTime = System.currentTimeMillis();
+		// Calculate the elapsed time
+		long elapsedTime = endTime - startTime;
+		// Print out the sorted array and elapsed time
+		System.out.println("Elapsed time: " + elapsedTime + " milliseconds");
+
+	}
+
+	public void insertionSort(int[] arr) {
+
+	}
+
+	public static void main(String[] args) {
+		A first = new A();
+		System.out.println(Arrays.toString(first.arr));
+
+		first.selectionSort();
+
+		System.out.println(Arrays.toString(first.arr));
+//		Array second = new Array();
+//		A second = new A();
+//		System.out.println(Arrays.toString(second.arr));
+
+		// the following code will check the proper work of the method
+		int[] check = { 1, 4, 7, 3, 2, 5, 8, 9, -2, 4, -5, 6, -7, -1, 10 };
+		System.out.println(Arrays.toString(check));
+		first.selectionSort(check);
+		System.out.println(Arrays.toString(check));
+
+	}
+
+}
