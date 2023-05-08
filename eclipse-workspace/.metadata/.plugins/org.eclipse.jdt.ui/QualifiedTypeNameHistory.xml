@@ -2,6 +2,22 @@
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="java.lang.IndexOutOfBoundsException"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
-    <fullyQualifiedTypeName name="javax.swing.JPanel"/>
     <fullyQualifiedTypeName name="java.awt.event.MouseListener"/>
+    <fullyQualifiedTypeName name="javax.swing.JPanel"/>
+    <fullyQualifiedTypeName name="java.awt.Font"/>
+    <fullyQualifiedTypeName name="javax.swing.BorderFactory"/>
+    <fullyQualifiedTypeName name="javax.swing.border.Border"/>
+    <fullyQualifiedTypeName name="javax.swing.JLabel"/>
+    <fullyQualifiedTypeName name="java.awt.Dimension"/>
+    <fullyQualifiedTypeName name="java.awt.Color"/>
+    <fullyQualifiedTypeName name="java.awt.BasicStroke"/>
+    <fullyQualifiedTypeName name="javax.swing.JFrame"/>
+    <fullyQualifiedTypeName name="javax.imageio.ImageIO"/>
+    <fullyQualifiedTypeName name="java.io.File"/>
+    <fullyQualifiedTypeName name="java.awt.image.BufferedImage"/>
+    <fullyQualifiedTypeName name="java.awt.Image"/>
+    <fullyQualifiedTypeName name="java.io.IOException"/>
+    <fullyQualifiedTypeName name="binary_tree_non_graded_online_journal.NewBinarySearchTree"/>
+    <fullyQualifiedTypeName name="java.util.TreeSet"/>
+    <fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
 </qualifiedTypeNameHistroy>
