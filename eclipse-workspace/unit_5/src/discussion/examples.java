@@ -1,6 +1,5 @@
 package discussion;
 import java.util.HashSet;
-import java.util.TreeMap;
 public class examples {
 	/**
 	 * This program demonstrates the use of a HashSet 
