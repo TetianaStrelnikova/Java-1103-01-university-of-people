@@ -33,4 +33,7 @@
     <fullyQualifiedTypeName name="java.io.IOException"/>
     <fullyQualifiedTypeName name="javax.swing.JApplet"/>
     <fullyQualifiedTypeName name="online_journal.TestStopWatchRunner"/>
+    <fullyQualifiedTypeName name="java.net.URL"/>
+    <fullyQualifiedTypeName name="javax.sound.sampled.Clip"/>
+    <fullyQualifiedTypeName name="javax.sound.sampled.AudioSystem"/>
 </qualifiedTypeNameHistroy>
