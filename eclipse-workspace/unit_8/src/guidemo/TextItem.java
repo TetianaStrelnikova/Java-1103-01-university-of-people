@@ -72,20 +72,21 @@ public class TextItem {
 	}
 
 	public void setText(String newText) {
-		Scanner reader = new Scanner(newText);
-		ArrayList<String> s = new ArrayList<String>();
-		while (reader.hasNextLine()) {
-			s.add(reader.nextLine());
+		try (Scanner reader = new Scanner(newText)) {
+			ArrayList<String> s = new ArrayList<String>();
+			while (reader.hasNextLine()) {
+				s.add(reader.nextLine());
+			}
+			while (s.size() > 0 && s.get(0).trim().length() == 0)
+				s.remove(0);  // remove blank lines from front
+			while (s.size() > 0 && s.get(s.size()-1).trim().length() == 0)
+				s.remove(s.size()-1);  // remove blank lines from end
+			if (s.size() == 0)
+				throw new IllegalArgumentException("Text can't be empty.");
+			lines = new String[s.size()];
+			for (int i = 0; i < lines.length; i++)
+				lines[i] = s.get(i);
 		}
-		while (s.size() > 0 && s.get(0).trim().length() == 0)
-			s.remove(0);  // remove blank lines from front
-		while (s.size() > 0 && s.get(s.size()-1).trim().length() == 0)
-			s.remove(s.size()-1);  // remove blank lines from end
-		if (s.size() == 0)
-			throw new IllegalArgumentException("Text can't be empty.");
-		lines = new String[s.size()];
-		for (int i = 0; i < lines.length; i++)
-			lines[i] = s.get(i);
 		text = newText;
 	}
 

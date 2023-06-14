@@ -4,21 +4,14 @@ import java.awt.*;
 import java.awt.event.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
-import java.net.URL;
-
 import javax.imageio.ImageIO;
-import javax.sound.sampled.AudioSystem;
-import javax.sound.sampled.Clip;
 import javax.swing.*;
-import javax.sound.sampled.LineUnavailableException;
-import javax.sound.sampled.UnsupportedAudioFileException;
-import java.io.IOException;
-import javax.sound.sampled.*;
 
 /**
  * A frame that displays a multiline text, possibly with a background image and
  * with added icon images, in a DrawPanel, along with a variety of controlls.
  */
+@SuppressWarnings("removal")
 public class GuiDemo extends JFrame {
 
 	/**
@@ -100,7 +93,8 @@ public class GuiDemo extends JFrame {
 	/**
      * Plays a sound when the program is run for the first time.
      */
-    
+    s
+	@SuppressWarnings("deprecation")
 	private void playFirstTimeSound() {    
 	   AudioClip thatslife = Util.getSound("resources/sounds/thatslife.wav");
 	    thatslife.play();	}
